@@ -16,6 +16,6 @@ public class ConexaoJDBC {
             instancia = DriverManager.getConnection("jdbc:derby://localhost:1527/lppo-2016-1", "usuario", "1234");
         }
         return instancia;
-    }
+    } 
     
 }
