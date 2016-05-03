@@ -13,12 +13,12 @@ public class Atividade {
 
     public void setId(Long id) {
         this.id = id;
-    }
+    } 
 
     public String getFuncionario() {
         return funcionario; 
     }
-
+ 
     public void setFuncionario(String funcionario) {
         this.funcionario = funcionario;
     }
