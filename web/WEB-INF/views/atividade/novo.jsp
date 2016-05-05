@@ -3,20 +3,30 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Novo Estabelecimento</title>
+        <title>Nova Atividade</title>
     </head>
     <body>
         <jsp:include page="fragments/menu.jspf" />
-        <h1>Novo Estabelecimento</h1>
+        <h1>Nova Atividade</h1>
         <form method="post">
-            <div>
-                <label>Nome:
-                <input type="text" name="nome" />
+             <div>
+                <label>Funcionario:
+                <input type="text" name="funcionario" />
                 </label>
             </div>
             <div>
-                <label>Endereço:
-                    <textarea name="endereco" ></textarea>
+                <label>Descricao:
+                <textarea name="descricao" ></textarea>
+                </label>
+            </div>
+             <div>
+                <label>Tipo:
+                <input type="text" name="tipo" />
+                </label>
+            </div>
+           <div>
+                <label>Data:
+                <input type="text" name="data" />
                 </label>
             </div>
             <div>

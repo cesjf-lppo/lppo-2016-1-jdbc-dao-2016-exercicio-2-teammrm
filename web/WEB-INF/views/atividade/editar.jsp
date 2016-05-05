@@ -3,30 +3,30 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Editar Estabelecimento</title>
+        <title>Nova Atividade</title>
     </head>
     <body>
         <jsp:include page="fragments/menu.jspf" />
-        <h1>Editar Estabelecimento</h1>
+        <h1>Nova Atividade</h1>
         <form method="post">
-            <div>
-                <label>ID: ${estabelecimento.id}
-                <input type="hidden" name="id" value="${estabelecimento.id}"/>
+             <div>
+                <label>Funcionario:
+                <input type="text" name="funcionario" value="${atividade.funcionario}" />
                 </label>
             </div>
             <div>
-                <label>Nome:
-                <input type="text" name="nome"  value="${estabelecimento.nome}"/>
+                <label>Descricao:
+                <textarea name="descricao" > ${atividade.descricao}</textarea>
                 </label>
             </div>
-            <div>
-                <label>Endereço:
-                    <textarea name="endereco" >${estabelecimento.endereco}</textarea>
+             <div>
+                <label>Tipo:
+                <input type="text" name="tipo"  value="${atividade.tipo}"/>
                 </label>
             </div>
-            <div>
-                <label>Votos:
-                <input type="number" name="votos"  value="${estabelecimento.votos}"/>
+           <div>
+                <label>Data:
+                <input type="text" name="data"  value="${atividade.data}" />
                 </label>
             </div>
             <div>
