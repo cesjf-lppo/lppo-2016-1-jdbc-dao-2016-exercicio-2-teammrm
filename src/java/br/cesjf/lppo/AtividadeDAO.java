@@ -17,15 +17,14 @@ public class AtividadeDAO {
         try {
             Connection conexao = ConexaoJDBC.getInstance();
             Statement operacao = conexao.createStatement();
-            ResultSet resultado = operacao.executeQuery("SELECT * FROM estabelecimento");
+            ResultSet resultado = operacao.executeQuery("SELECT * FROM atividade");
             while (resultado.next()) {
                 Atividade ativ = new Atividade();
                 ativ.setId(resultado.getLong("id"));
                 ativ.setDescricao(resultado.getString("Descricao"));
                 ativ.setFuncionario(resultado.getString("Funcionario"));
                 ativ.setHoras(resultado.getInt("Horas"));
-                ativ.setTipo(resultado.getString("Tipo"));
-                ativ.setId(resultado.getLong("id"));
+                ativ.setTipo(resultado.getString("Tipo"));                
                 todos.add(ativ);
             }
 
@@ -41,7 +40,7 @@ public class AtividadeDAO {
         try {
             Connection conexao = ConexaoJDBC.getInstance();
             Statement operacao = conexao.createStatement();
-            operacao.executeUpdate(String.format("INSERT INTO atividade(Descricao, Funcionario, Horas, Tipo) VALUES('%s','%s','%s','%s','%s')", novaativ.getDescricao(), novaativ.getFuncionario(),novaativ.getHoras(),novaativ.getTipo()));
+            operacao.executeUpdate(String.format("INSERT INTO atividade(Descricao, Funcionario, Horas, Tipo) VALUES('%s','%s',%i,'%s')", novaativ.getDescricao(), novaativ.getFuncionario(),novaativ.getHoras(),novaativ.getTipo()));
 
         } catch (SQLException ex) {
             Logger.getLogger(AtividadeDAO.class.getName()).log(Level.SEVERE, null, ex);
